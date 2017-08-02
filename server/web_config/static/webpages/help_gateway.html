@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../css/libs/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="shortcut icon" href="../img/lumenex_icon.png">
+
+  <script src="../js/libs/jquery.min.js"></script>
+  <script src="../js/libs/bootstrap.min.js"></script>
+  <script src="../js/libs/bootstrap_validator.min.js"></script>
+  <script src="../js/validator.js"></script>
+  <script src="../js/common.js"></script>
+
+  <title> Gateway Help </title>
+
+</head>
+<body onload="getUsername()">
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <img class="ui mini image size" src="../img/lumenux.png">
+      </div>
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="gateway.html">
+              Gateway
+              <span class="sr-only">
+                (current)
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="pdm.html">
+              PDM
+            </a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="pull-right dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <span class="glyphicon glyphicon-option-vertical"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="aligning-text" >
+                <span id="spnSignedinUsername">
+                  <h5 class="margin-set0"></h5>
+                </span>
+              </li>
+              <li class="divider"></li>
+              <li class="glyphs-position">
+                <span class="glyphicon glyphicon-cog glyphicon-fonts">
+                  <a class="cursor glyphs" href="settings.html">
+                    Settings
+                  </a>
+                </span>
+              </li>
+              <li class="glyphs-position">
+                <span class="glyphicon glyphicon-question-sign glyphicon-fonts">
+                  <a class="cursor glyphs" href="help.html">
+                    Help
+                  </a>
+                </span>
+              </li>
+              <li class="glyphs-position">
+                <span class="glyphicon glyphicon-off glyphicon-fonts">
+                  <a class="cursor glyphs" href="login.html">
+                    Sign Out
+                  </a>
+                </span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="col-sm-1"> </div>
+    <div class="col-sm-3">
+      <table class="table table-hover side-menu">
+        <thead>
+          <tr>
+            <td>
+              <strong>Help<strong>
+            </td>
+          </tr>
+        </thead>
+        <tr>
+          <td class="cursor" onclick="window.location.href='help.html';">
+            Overview
+          </td>
+        </tr>
+        <tr class="active text-success">
+          <td class="cursor" onclick="window.location.href='help_gateway.html';">
+            Gateway
+          </td>
+        </tr>
+        <tr>
+          <td class="cursor" onclick="window.location.href='help_pdm.html';">
+            PDM
+          </td>
+        </tr>
+        <tr>
+          <td class="cursor" onclick="window.location.href='help_settings.html';">
+            Settings
+          </td>
+        </tr>
+      </table>
+    </div>
+    <form class="form-horizontal">
+      <div class="col-sm-8 table-position">
+        <fieldset>
+          <center>
+            <legend class="legend-position">Gateway</legend>
+          </center>
+          <ul>
+            <p>
+              <li>
+                After the successful login, user will be redirected to the Gateway page(default).
+                It can be observed on the top header pane that Gateway is selected.
+              </li>
+            </p>
+          </ul>
+          <center>
+            <img src="../img/gateway.png" style="width:80%;height:80%;">
+          </center>
+          <br>
+          <ul>
+            <p>
+              <li>
+                There is an UPLOAD button on the right side of the page.
+              </li>
+              <br>
+              <center>
+                <img src="../img/upload.png" style="width:30%;height:30%;border:1px solid grey;">
+              </center>
+              <br>
+              <li>
+                By clicking the UPLOAD button the files from the pc will be browsed.
+                Select the files to be uploaded and the table will be updated.
+              </li>
+            </p>
+            <p>
+              <li>
+                The table shows the file name, date when the file is updated, remarks, the version of the file.
+              </li>
+            </p>
+            <p>
+              <li>
+                Also there are actions like edit and delete available for each file. The file name can be edited
+                by clicking the pencil icon in the actions column. The file will be deleted by clicking the trash icon in the actions column.
+              </li>
+            </p>
+            <p>
+              <li>
+                The file which is to be updated in the system is to be selected by clicking the appropriate radio button
+                placed before the file name.
+              </li>
+              <br>
+              <center>
+                <img src="../img/save_cancel.png" style="width=50%;height:50%;border:1px solid grey;">
+              </center>
+              <br>
+              <li>
+                Once the radio button is selected the Save & Cancel button at the bottom will be
+                active. If the file is to be uploaded in the system then click the Save button otherwise click Cancel button.
+              </li>
+            </p>
+            <br>
+          </ul>
+        </fieldset>
+      </div>
+    </form>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+</body>
+</html>

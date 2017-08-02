@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../css/libs/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="shortcut icon" href="../img/lumenex_icon.png">
+
+  <script src="../js/libs/jquery.min.js"></script>
+  <script src="../js/libs/bootstrap.min.js"></script>
+  <script src="../js/libs/bootstrap_validator.min.js"></script>
+  <script src="../js/validator.js"></script>
+  <script src="../js/login.js"></script>
+
+  <title> Login </title>
+
+</head>
+<body>
+  
+  <div class="container">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8" >
+      <img class="img-responsive center-block login-image" src="../img/lumenex.png">
+      <form class="form-horizontal table-position">
+        <fieldset>
+          <center>
+            <legend class="legend-position">
+              Lumenux Login
+            </legend>
+          </center>
+          <div class="form-group">
+            <label class="col-lg-3 control-label" >
+              Username
+              <font color="red">
+                <sup>*</sup>
+              </font>
+            </label>
+            <div class="col-lg-8">
+              <input type="text" class="form-control" id="txtUsername" placeholder="Enter Username">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="lblPassword" class="col-lg-3 control-label">
+              Password
+              <font color="red">
+                <sup>*</sup>
+              </font>
+            </label>
+            <div class="col-lg-8">
+              <input type="password" class="form-control" id="txtPassword" placeholder="Password">
+            </div>
+          </div>
+          <div>
+            <p type="text" id="txtError" class="col-lg-8 col-lg-offset-3" hidden>
+              <font color="red";>
+                Wrong Credentials
+              </font>
+            </p>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-8 col-lg-offset-3">
+              <button type="reset" class="btn btn-default" onclick="onSigninClicked()">
+                  Sign In
+              </button>
+              <a onclick="onForgotPasswordClicked()">
+                Forgot password?
+              </a>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

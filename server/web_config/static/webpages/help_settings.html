@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../css/libs/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="shortcut icon" href="../img/lumenex_icon.png">
+
+  <script src="../js/libs/jquery.min.js"></script>
+  <script src="../js/libs/bootstrap.min.js"></script>
+  <script src="../js/libs/bootstrap_validator.min.js"></script>
+  <script src="../js/validator.js"></script>
+  <script src="../js/common.js"></script>
+
+  <title> Settings Help </title>
+
+</head>
+<body onload="getUsername()">
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <img class="ui mini image size" src="../img/lumenux.png">
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="gateway.html">
+              Gateway
+              <span class="sr-only">
+                (current)
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="pdm.html">
+              PDM
+            </a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="pull-right dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <span class="glyphicon glyphicon-option-vertical">
+              </span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="aligning-text">
+                <span id="spnSignedinUsername">
+                  <h5 class="margin-set0"></h5>
+                </span>
+              </li>
+              <li class="divider"></li>
+              <li class="glyphs-position">
+                <span class="glyphicon glyphicon-cog glyphicon-fonts">
+                  <a class="cursor glyphs" href="settings.html">
+                    Settings
+                  </a>
+                </span>
+              </li>
+              <li class="glyphs-position">
+                <span class="glyphicon glyphicon-question-sign glyphicon-fonts">
+                  <a class="cursor glyphs" href="help.html">
+                    Help
+                  </a>
+                </span>
+              </li>
+              <li class="glyphs-position">
+                <span class="glyphicon glyphicon-off glyphicon-fonts">
+                  <a class="cursor glyphs" href="login.html">
+                    Sign Out
+                  </a>
+                </span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="col-sm-1"> </div>
+    <div class="col-sm-3">
+      <table class="table table-hover side-menu">
+        <thead>
+          <tr>
+            <td>
+              <strong>Help<strong>
+            </td>
+          </tr>
+        </thead>
+        <tr>
+          <td class="cursor" onclick="window.location.href='help.html';">
+            Overview
+          </td>
+        </tr>
+        <tr>
+          <td class="cursor" onclick="window.location.href='help_gateway.html';">
+            Gateway
+          </td>
+        </tr>
+        <tr>
+          <td class="cursor" onclick="window.location.href='help_pdm.html';">
+            PDM
+          </td>
+        </tr>
+        <tr class="active text-success">
+          <td class="cursor" onclick="window.location.href='help_settings.html';">
+            Settings
+          </td>
+        </tr>
+      </table>
+    </div>
+    <form class="form-horizontal">
+      <div class="col-sm-8 table-position">
+        <fieldset>
+          <center>
+            <legend class="legend-position">
+              Settings
+            </legend>
+          </center>
+          <ul>
+            <li>
+              On the right corner of the page, 3 vertical dots are there which symbolises the options menu.
+            </li>
+          </ul>
+          <center>
+              <img src="../img/options.png" style="width:10%;height:10%;border:1px solid grey;">
+          </center>
+          <br>
+          <ul>
+            <li>
+              The options menu has the following sub-menu.
+            </li>
+            <br>
+            <center>
+              <img src="../img/options_menu.png" style="width:30%;height:30%;border:1px solid grey;">
+            </center>
+            <br>
+            <li>
+              Click on the Settings option from the dropdown menu.
+            </li>
+            <li>
+              After clicking on the settings option, the following window appears.
+            </li>
+          </ul>
+          <center>
+            <img src="../img/general_setting.png" style="width:80%;height:80%;border:1px solid grey;">
+          </center>
+          <br>
+          <ul>
+              <li>
+                There are two options in the settings panel:
+                <p>1)General Settings</p>
+                <p>2)User Settings</p>
+              </li>
+              <li>
+                General settings shows the status regarding the server uptime as well as the memory consumed by the gateway and the pdm.
+              </li>
+              <li>
+                The user settings allows to add user information as well as the credentials of the user.
+              </li>
+            </ul>
+          <center>
+            <img src="../img/user_settings.png" style="width:80%;height:80%;border:1px solid grey;">
+          </center>
+          <br>
+        </fieldset>
+      </div>
+    </form>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+</body>
+</html>

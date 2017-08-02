@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../css/libs/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="shortcut icon" href="../img/lumenex_icon.png">
+
+  <script src="../js/common.js"></script>
+  <script src="../js/libs/jquery.min.js"></script>
+  <script src="../js/libs/bootstrap.min.js"></script>
+  <script src="../js/libs/bootstrap_validator.min.js"></script>
+  <script src="../js/validator.js"></script>
+  <script src="../js/user.js"></script>
+
+  <title> User </title>
+
+</head>
+<body onload="onLoad();">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <img class="ui mini image size" src="../img/lumenux.png">
+      </div>
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="gateway.html">Gateway
+              <span class="sr-only">(current)
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="pdm.html">PDM
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="pull-right dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <span class="glyphicon glyphicon-option-vertical">
+              </span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="aligning-text"><span id="spnSignedinUsername"><h5 class="margin-set0"></h5></span></li>
+              <li class="divider"></li>
+              <li class="glyphs-position">
+                <span class="glyphicon glyphicon-cog glyphicon-fonts">
+                  <a class="cursor glyphs" href="settings.html">Settings
+                  </a>
+                </span>
+              </li>
+              <li class="glyphs-position">
+                <span class="glyphicon glyphicon-question-sign glyphicon-fonts">
+                  <a class="cursor glyphs" href="help.html">Help
+                  </a>
+                </span>
+              </li>
+              <li class="glyphs-position">
+                <span class="glyphicon glyphicon-off glyphicon-fonts">
+                  <a class="cursor glyphs" href="login.html">Sign Out
+                  </a>
+                </span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-3">
+      <table class="table table-hover side-menu">
+        <thead>
+          <tr>
+          <td>
+            <strong>
+              Settings
+            <strong>
+          </td>
+        </tr>
+        </thead>
+        <tr>
+          <td class="cursor" onclick="window.location.href='settings.html';">General
+          </td>
+        </tr>
+        <tr class="active text-success">
+          <td class="cursor" onclick="window.location.href='user.html';">User
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <form class="form-horizontal" id="info_form" role="form" data-toggle="validator">
+      <div class="col-sm-6 table-position">
+        <fieldset>
+          <center>
+            <legend class="legend-position">
+              User Information
+            </legend>
+          </center>
+          <div class="form-group">
+            <label class="col-lg-4 control-label">
+              First Name
+              <font color="red">
+                <sup>*</sup>
+              </font>
+            </label>
+            <div class="col-lg-8">
+              <input name="txtFirstname" placeholder="First Name" class="form-control" type="text" id="txtFirstname">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-4 control-label">
+              Last Name
+              <font color="red">
+                <sup>*</sup>
+              </font>
+            </label>
+            <div class="col-lg-8">
+              <input name="txtLastname" placeholder="Last Name" class="form-control" type="text" id="txtLastname">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-4 control-label">
+              Email
+              <font color="red">
+                <sup>*</sup>
+              </font>
+            </label>
+            <div class="col-lg-8">
+              <input name="txtEmailid" placeholder="E-Mail Address" class="form-control" type="text" id="txtEmailid">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-8 col-lg-offset-4">
+              <button type="reset" class="btn btn-default" onclick="onUserInfoSaveClicked()">
+                Save
+              </button>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="col-sm-4">
+      </div>
+      <div class="col-sm-6 table-position">
+        <fieldset>
+          <center>
+            <legend class="legend-position">Credentials</legend>
+          </center>
+          <div class="form-group">
+            <label class="col-lg-4 control-label">
+              Password
+              <font color="red">
+                <sup>*</sup>
+              </font>
+            </label>
+            <div class="col-lg-8">
+              <input name="txtCurrentPassword" placeholder="Current Password" class="form-control" type="password" id="txtCurrentPassword">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-4 control-label">
+              New Password
+              <font color="red">
+                <sup>*</sup>
+              </font>
+            </label>
+            <div class="col-lg-8">
+              <input name="txtNewPassword" placeholder="New Password" class="form-control" type="password" id="txtNewPassword">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-4 control-label">
+              Confirm Password
+              <font color="red">
+                <sup>*</sup>
+              </font>
+            </label>
+            <div class="col-lg-8">
+              <input name="txtConfirmPassword" placeholder="Confirm Password" class="form-control" type="password" id="txtConfirmPassword">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-8 col-lg-offset-4">
+              <button type="reset" class="btn btn-default"  onclick="onCredentialsSaveClicked()">
+                Save
+              </button>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </form>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+</body>
+</html>
